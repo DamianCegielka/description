@@ -1,30 +1,18 @@
 package com.epam.description.user;
 
 import javax.persistence.*;
-import java.time.Instant;
 import java.util.Date;
 
 @Entity
-//@Table(name = "users")
+@Table(name = "users")
 public class User {
     @Id
-    @Column(name = "id_user", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    @Column(name = "first_name", nullable = false, length = 45)
     private String firstName;
-
-    @Column(name = "last_name", nullable = false, length = 45)
     private String lastName;
-
-    @Column(name = "email", nullable = false, length = 45)
     private String email;
-
-    @Column(name = "password", nullable = false, length = 15)
     private String password;
-
-    @Column(name = "add_date")
     private Date addDate;
 
     public Integer getId() {
